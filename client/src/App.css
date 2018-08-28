@@ -1,3 +1,8 @@
 body {
   background: lightgrey;
+  word-wrap: break-word!important;
+}
+
+.col {
+  min-height: 0px!important;
 }

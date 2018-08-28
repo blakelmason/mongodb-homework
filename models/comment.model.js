@@ -6,17 +6,15 @@ const Schema = mongoose.Schema;
 
 //User schema
 const CommentSchema = new Schema({
-  title: {
+  comment: {
     type: String,
     trim: true,
+    required: true
   },
-  link: {
+  article: {
     type: String,
     trim: true,
-  },
-  summary: {
-    type: String,
-    trim: true,
+    required: true
   }
 })
 
