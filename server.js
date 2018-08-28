@@ -27,7 +27,6 @@ app.use(bodyParser.json());
 app.use(routes.comment);
 app.use(routes.scrape);
 
-
 //static
 app.use(express.static('/client/build'));
 app.get('*', (req, res) => {
