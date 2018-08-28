@@ -29,6 +29,10 @@ app.use(express.static('./client/build'));
 app.use(routes.comment);
 app.use(routes.scrape);
 
+app.get('*', function (req, res) {
+  res.sendFile('./client/build/index.html');
+});
+
 //listen
 app.listen(PORT, function () {
   console.log("Server on port " + PORT);
