@@ -30,7 +30,7 @@ app.use(routes.comment);
 app.use(routes.scrape);
 
 app.get('*', function (req, res) {
-  res.sendFile('./client/build/index.html');
+  res.sendFile('/client/build/index.html');
 });
 
 //listen
