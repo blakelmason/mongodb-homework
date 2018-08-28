@@ -5,6 +5,7 @@ require('dotenv').config()
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const path = require('path');
 
 //routes
 const routes = require('./routes')
@@ -30,7 +31,7 @@ app.use(routes.comment);
 app.use(routes.scrape);
 
 app.get('*', function (req, res) {
-  res.sendFile('/client/build/index.html');
+  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
 
 //listen
